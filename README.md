@@ -16,8 +16,6 @@ Just import yahtzee, then print it!
 
 ```py
 from yahtzee import yahtzee
-
-print(yahtzee)
 ```
 
 # How to install
