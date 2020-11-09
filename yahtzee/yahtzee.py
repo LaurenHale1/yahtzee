@@ -1,7 +1,8 @@
 import random
+from colorama import Fore
 
 def introduction():
-    print("""Welcome to this Yahtzee program. The rules are simple. Roll the 5
+    print(f"""{Fore.BLUE}Welcome to this Yahtzee program. The rules are simple. Roll the 5
 dice each round. You have up to three rolls per round. After you are
 done rolling, pick a category to score in. Try to get a high score!\n""")
     
@@ -10,7 +11,6 @@ def options(scores,yahtzee):
       lower=0
       bonus1=0
       bonus2=0
-      print(scores)
       for i in range(6):
         if scores[i]!="":
           upper+=int(scores[i])
@@ -26,7 +26,7 @@ def options(scores,yahtzee):
       total1=lower+upper+bonus1+bonus2
       print("""
       The score as of now is:
-      1. Aces            |""",scores[0],"""
+      1. Ones            |""",scores[0],"""
       2. Twos            |""",scores[1],"""
       3. Threes          |""",scores[2],"""
       4. Fours           |""",scores[3],"""
@@ -46,27 +46,6 @@ def options(scores,yahtzee):
       Total              |""",total1,"""
       """)
       return total1
-      print("""
-      The score as of now is:
-      1. Aces            |""",scores[0],"""
-      2. Twos            |""",scores[1],"""
-      3. Threes          |""",scores[2],"""
-      4. Fours           |""",scores[3],"""
-      5. Fives           |""",scores[4],"""
-      6. Sixes           |""",scores[5],"""
-      Upper Total        |""",upper,"""
-      Bonus              |""",bonus1,"""
-      7. 3-of-a-kind     |""",scores[6],"""
-      8. 4-of-a-kind     |""",scores[7],"""
-      9. Full House      |""",scores[8],"""
-      10. Small Straight |""",scores[9],"""
-      11. Large Straight |""",scores[10],"""
-      12. Yahtzee        |""",scores[11],"""
-      13. Chance         |""",scores[12],"""
-      Bonus              |""",bonus2,"""
-      Lower Total        |""",lower,"""
-      Total              |""",total1,"""
-      """)
 def firstroll():
     print("\nHere is your first roll:")
     die1=random.randrange(1,7)
@@ -192,7 +171,6 @@ def scoresheet(scores,yahtzee):
     lower=0
     bonus1=0
     bonus2=0
-    print(scores)
     for i in range(6):
       if scores[i]!="":
         upper+=int(scores[i])
@@ -207,7 +185,7 @@ def scoresheet(scores,yahtzee):
       bonus2=100
     total=lower+upper+bonus1+bonus2
     print("""
-    1. Aces            |""",scores[0],"""
+    1. Ones            |""",scores[0],"""
     2. Twos            |""",scores[1],"""
     3. Threes          |""",scores[2],"""
     4. Fours           |""",scores[3],"""
