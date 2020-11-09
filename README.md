@@ -1,5 +1,7 @@
 # Yahtzee
 
+[![PyPI version](https://img.shields.io/pypi/v/yahtzee.svg)](https://pypi.org/project/yahtzee/)
+
 Yahtzee in python.
 
 Have you ever wanted to play yahtzee in python?
